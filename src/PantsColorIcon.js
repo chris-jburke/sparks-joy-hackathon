@@ -21,7 +21,7 @@ function PantsIcon(props) {
     </SvgIcon>
   );
 }
-export default function PantsIconColors(props) {
+export default function PantsColorIcon(props) {
 	const classes = useStyles()
 	const currColor = props.color
 	return(

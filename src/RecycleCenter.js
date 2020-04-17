@@ -51,6 +51,7 @@ const RecycleCenter = (props) => {
 			<Grid item xs={6}>
 				<Grid 
 					container
+					direction="column"
 					justify="center"
 					alignContent="center"
 					alignItems="center"

@@ -1,0 +1,27 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import SvgIcon from '@material-ui/core/SvgIcon';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > svg': {
+      margin: theme.spacing(2),
+    },
+  },
+}));
+
+function SweaterIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path stroke="black" d="M102.888 130.133H105.596L112.094 53.1377C112.635 52.0532 113.177 50.9688 114.26 51.511C115.343 51.511 115.884 52.0532 115.884 52.5954L131.047 130.133H150L135.921 29.8222L108.845 9.75998C105.054 14.64 100.181 18.4355 94.7653 21.6888C88.8087 24.3999 82.3105 26.5688 75.2708 26.5688C68.231 26.5688 61.1913 24.3999 55.2347 21.6888C49.8195 18.4355 44.9458 14.64 41.1552 9.75998L14.0794 29.8222L0.541516 130.133H18.9531L34.1155 52.5954C34.657 51.511 35.1986 50.9688 36.2816 51.511C37.3646 51.511 37.9061 52.0532 37.9061 53.1377L44.9458 130.133H102.888ZM101.264 133.929H49.278V144.231H101.264V133.929ZM93.1408 18.4355C98.0144 15.7244 102.888 11.9289 106.137 7.04887L96.3899 0H54.1516L43.8628 7.04887C47.6534 11.9289 51.9856 15.7244 56.8592 18.4355C62.2744 21.1466 68.7726 22.7733 75.2708 22.7733C81.769 22.7733 87.7256 21.1466 93.1408 18.4355ZM150 133.386H131.588V143.689H150V133.386ZM18.9531 133.386H0V143.689H18.9531V133.386Z" />
+    </SvgIcon>
+  );
+}
+export default function SweaterColorIcon(props) {
+	const classes = useStyles()
+	const currColor = props.color
+	return(
+		<SweaterIcon viewBox="0 0 150 145" htmlColor={props.color}/>
+	)
+}
