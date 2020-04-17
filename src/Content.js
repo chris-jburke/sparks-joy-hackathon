@@ -6,10 +6,12 @@ import Profile from './Profile'
 import HomeCom from './HomeCom'
 import usersData from './json/usersData'
 import usersClosets from './json/usersClosets'
+import RecycleCenter from './RecycleCenter'
 const Content = (props) =>{
 	const [signedIn, setSignedIn] = useState(false)
 	const [currUser, setCurrUser] = useState("bob@test.com")
 	const [useLocalStorage, setUseLocalStorage] = useState(false)
+	const [recycle, setRecycle] = useState([])
 	const [allClosets, setAllClosets] = useState(usersClosets)
 	return(
 		<BrowserRouter>
@@ -17,7 +19,8 @@ const Content = (props) =>{
 			<Route exact path="/" component={()=> <HomeCom />} />
 			<Route path="/signup" component={()=> <SignUpCom />} />
 			<Route path="/signin" component={()=> <SignInCom setCurrUser={setCurrUser} signedIn={signedIn} setSignedIn={setSignedIn}/>} />
-			<Route path="/profile" component={()=> <Profile currUser={currUser} allClosets={allClosets} />} />
+			<Route path="/profile" component={()=> <Profile recycle={recycle} setRecycle={setRecycle} currUser={currUser} allClosets={allClosets} />} />
+			<Route path="/recycle" component={()=> <RecycleCenter recycle={recycle}/>} />
 		</Switch>
 		</BrowserRouter>
 	)

@@ -2,8 +2,11 @@ import React, {useState, useEffect} from 'react'
 import {Box, Grid, Modal, ButtonBase, Button, FormControl, MenuItem, InputLabel, Select} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {Link as RouterLink} from 'react-router-dom'
+import Link from '@material-ui/core/Link'
 import AddNewItem from './AddNewItem'
 import EcoIcon from '@material-ui/icons/Eco'
+import ShirtColorIcon from './ShirtColorIcon'
+import PantsColorIcon from './PantsColorIcon'
 function getModalStyle(){
   	const top = 50
   	const left = 50
@@ -56,12 +59,23 @@ const ProfileCloset = (props) => {
   	};
 	const getJSX = (type, color, material, size, i) => {
 		if(i < (7*goal)) {
-			return (
-				<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span>Type: {type} Color: {color} Material: {material} Size: {size} </span>
-					<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
-				</Grid>
-			)
+			if(type === "tshirt") {
+				return (
+					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
+						<ShirtColorIcon color={color} />
+						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					</Grid>
+				)
+			} else if(type === "jeans" || type === "pants") {
+				return (
+					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
+						<PantsColorIcon color={color} />
+						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					</Grid>
+				)
+			}
 		} else {
 			return(
 				<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
@@ -120,6 +134,7 @@ const ProfileCloset = (props) => {
 		props.setCloset(newCloset)
 		let recycledCloset = [...myRecycle, ...removedItem]
 		setMyRecycle(recycledCloset)
+		props.setRecycle(recycledCloset)
 	}
   const body = (
     <div style={modalStyle} className={classes.paper} >
@@ -258,11 +273,11 @@ const ProfileCloset = (props) => {
 				getJSX(item.type,item.color,item.material,item.size,i)
             ))}
 		</Grid>
-          <Grid item xs={12} style={{"border": "2px dashed grey", "margin": "5px 0", "padding":"0", "borderRadius": "10px", "width":"500px"}}>
-            <ButtonBase  style={{"display":"flex", "justify":"center", "width":"100%", "height":"100%", "textAlign":"center"}} focusRipple onClick={(e)=>handleOpen(e)}> 
+          <Box style={{"textAlign":"center", "border": "2px dashed grey", "margin": "5px 0", "padding":"0", "borderRadius": "10px", "width":"600px"}}>
+            <ButtonBase  style={{"display":"flex", "justify":"center", "width":"600px", "height":"100%", "textAlign":"center"}} focusRipple onClick={(e)=>handleOpen(e)}> 
             	<AddNewItem />
             </ButtonBase>
-		  </Grid>
+		  </Box>
         <h1>Clothes To Recycle</h1>
 		<Grid
 			container
@@ -272,7 +287,7 @@ const ProfileCloset = (props) => {
 			spacing={2}
 			style={{"marginTop":"20px","marginBottom":"20px", "minHeight":"50px", "border":"2px black solid","borderRadius":"10px"}}
 		>
-			{myRecycle.map((item, i) => (
+			{props.recycle.map((item, i) => (
 				getRecycle(item.type,item.color,item.material,item.size,i)
             ))}
 		</Grid>
@@ -285,9 +300,9 @@ const ProfileCloset = (props) => {
           {body}
         </Modal>
         <Box style={{"textAlign":"center"}}>
-        	<Button variant="outlined">
+        	<Link variant="outlined" to="/recycle" component={LinkBehavior}>
         		Recycling Center
-        	</Button>
+        	</Link>
         </Box>
 		</>
 	)

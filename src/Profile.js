@@ -12,7 +12,7 @@ const Profile = (props) => {
 			alignContent="center"
 		>
 			<Grid item xs={12}>
-				<ProfileCloset closet={closet} setCloset={setCloset} />
+				<ProfileCloset recycle={props.recycle} setRecycle={props.setRecycle} closet={closet} setCloset={setCloset} />
 			</Grid>
 		</Grid>
 	)
