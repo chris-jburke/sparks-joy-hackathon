@@ -63,7 +63,7 @@ const ProfileCloset = (props) => {
 				return (
 					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
 						<ShirtColorIcon color={color} />
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+						<span style={{"marginLeft":"10px", "width":"400px"}}>Color: {color} Material: {material} Size: {size} </span>
 						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
 					</Grid>
 				)
@@ -71,7 +71,7 @@ const ProfileCloset = (props) => {
 				return (
 					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
 						<PantsColorIcon color={color} />
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+						<span style={{"marginLeft":"10px", "width":"400px"}}>Color: {color} Material: {material} Size: {size} </span>
 						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
 					</Grid>
 				)
