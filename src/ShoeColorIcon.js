@@ -22,6 +22,6 @@ export default function ShoeColorIcon(props) {
 	const classes = useStyles()
 	const currColor = props.color
 	return(
-		<ShoeIcon viewBox="0 0 150 144" htmlColor={props.color}/>
+		<ShoeIcon viewBox="0 0 150 145" htmlColor={props.color}/>
 	)
 }

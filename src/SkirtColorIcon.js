@@ -23,6 +23,6 @@ export default function SkirtIconColors(props) {
 	const classes = useStyles()
 	const currColor = props.color
 	return(
-		<SkirtIcon viewBox="0 0 118 150" htmlColor={props.color}/>
+		<SkirtIcon viewBox="0 0 150 145" htmlColor={props.color}/>
 	)
 }

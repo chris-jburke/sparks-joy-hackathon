@@ -3,11 +3,14 @@
 		{
 			"owner":"bob@test.com",
 			"closet":[
-				{"type":"jeans","color":"blue","material":"denim", "size":"M"},
 				{"type":"jeans","color":"black","material":"denim", "size":"M"},
-				{"type":"jeans","color":"grey","material":"denim", "size":"M"},
-				{"type":"tshirt","color":"white","material":"cotton", "size":"M"},
-				{"type":"tshirt","color":"black","material":"cotton", "size":"M"}
+				{"type":"dress","color":"aqua","material":"denim", "size":"M"},
+				{"type":"accessories","color":"red","material":"denim", "size":"M"},
+				{"type":"skirt","color":"pink","material":"cotton", "size":"M"},
+				{"type":"jacket","color":"yellow","material":"cotton", "size":"M"},
+				{"type":"sweater","color":"chartreuse","material":"wool","size":"L"},
+				{"type":"shoes", "color":"grey", "material":"suede","size":"XL"},
+				{"type":"tshirt","color":"navy","material":"cotton","size":"XS"}
 			]
 
 		},

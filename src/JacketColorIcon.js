@@ -30,6 +30,6 @@ export default function JacketColorIcon(props) {
 	const classes = useStyles()
 	const currColor = props.color
 	return(
-		<JacketIcon viewBox="0 0 130 151" htmlColor={props.color}/>
+		<JacketIcon viewBox="0 0 150 145" htmlColor={props.color}/>
 	)
 }

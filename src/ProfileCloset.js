@@ -67,132 +67,340 @@ const ProfileCloset = (props) => {
 		if(i < (7*goal)) {
 			if(type === "tshirt") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><ShirtColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<ShirtColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "jeans" || type === "pants") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><PantsColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<PantsColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "jacket") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><JacketColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<JacketColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "shoes") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><ShoeColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<ShoeColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "sweater") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><SweaterColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<SweaterColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "skirt") {
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><SkirtColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<SkirtColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "dress"){
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><DressColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<DressColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)					
 			} else if(type === "accessories"){
 				return (
-					<Grid style={{"color":"green", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><AccessoriesColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<AccessoriesColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"green"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)					
 			}
 		} else {
 			if(type === "tshirt") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><ShirtColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<ShirtColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "jeans" || type === "pants") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><PantsColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<PantsColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "jacket") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><JacketColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<JacketColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "shoes") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><ShoeColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<ShoeColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)
 			} else if(type === "sweater") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><SweaterColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<SweaterColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "skirt") {
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><SkirtColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<SkirtColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)				
 			} else if(type === "dress"){
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><DressColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<DressColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)					
 			} else if(type === "accessories"){
 				return (
-					<Grid style={{"color":"red", "alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-						<span style={{"width":"75px"}}><AccessoriesColorIcon color={color} /></span>
-						<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
-						<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button> 
+					<Grid style={{"width":"100%"}} key={i} item xs={12}>
+						<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+						>
+							<Grid item xs={1}>
+								<AccessoriesColorIcon color={color} />
+							</Grid>
+							<Grid style={{"color":"red"}} item xs={8}>
+								<span>Color: {color} Material: {material} Size: {size} </span>
+							</Grid>
+							<Grid item xs={3}>
+								<Button variant="outlined" startIcon={<EcoIcon />} onClick={(e)=> handleMoveToRecycle(e,i)}>Recycle</Button>
+							</Grid> 
+						</Grid>
 					</Grid>
 				)					
 			}			
@@ -201,58 +409,146 @@ const ProfileCloset = (props) => {
 	const getRecycle = (type, color, material, size, i) => {
 		if(type === "tshirt") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><ShirtColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<ShirtColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)
 		} else if(type === "jeans" || type === "pants") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><PantsColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<PantsColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)
 		} else if(type === "jacket") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><JacketColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<JacketColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)				
 		} else if(type === "shoes") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><ShoeColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<ShoeColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)
 		} else if(type === "sweater") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><SweaterColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<SweaterColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)				
 		} else if(type === "skirt") {
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><SkirtColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<SkirtColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)				
 		} else if(type === "dress"){
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><DressColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<DressColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)					
 		} else if(type === "accessories"){
 			return (
-				<Grid style={{"alignSelf":"center", "width":"500px"}}key={i} item xs={12}>
-					<span style={{"width":"75px"}}><AccessoriesColorIcon color={color} /></span>
-					<span style={{"marginLeft":"10px"}}>Color: {color} Material: {material} Size: {size} </span>
+				<Grid style={{"width":"100%"}} key={i} item xs={12}>
+					<Grid
+							container
+							justify="center"
+							alignItems="center"
+							alignContent="spaceEvenly"
+					>
+						<Grid item xs={2}>
+							<AccessoriesColorIcon color={color} />
+						</Grid>
+						<Grid item xs={10}>
+							<span>Color: {color} Material: {material} Size: {size} </span>
+						</Grid>
+					</Grid>
 				</Grid>
 			)					
 		}
@@ -441,10 +737,10 @@ const ProfileCloset = (props) => {
 			style={{"marginTop":"20px","marginBottom":"20px", "minHeight":"50px", "border":"2px black solid","borderRadius":"10px"}}
 		>
 			<Grid item xs={12}>
-				<Box style={{"paddingLeft":"70px", "display":"flex"}}><div style={{"marginRight":"25px", "height":"30px","width":"30px", "backgroundColor":"green", "borderRadius":"45px"}}></div><span>Green Indicates Responsible Ownership</span></Box>
+				<Box style={{"paddingLeft":"70px", "display":"flex"}}><div style={{"marginRight":"25px", "height":"30px","width":"30px", "backgroundColor":"green", "borderRadius":"45px"}}></div><span style={{"paddingTop":"6px"}}>Green Indicates Responsible Ownership</span></Box>
 			</Grid>
 			<Grid item xs={12}>
-				<Box style={{"display":"flex"}}><div style={{"marginRight":"25px", "height":"30px","width":"30px","backgroundColor":"red", "borderRadius":"45px"}}></div><span>Red Indicates Excess Clothes</span></Box>
+				<Box style={{"display":"flex"}}><div style={{"marginRight":"25px", "height":"30px","width":"30px","backgroundColor":"red", "borderRadius":"45px"}}></div><span style={{"paddingTop":"6px"}}>Red Indicates Excess Clothes</span></Box>
 			</Grid>
 
 			{myCloset.map((item, i) => (
