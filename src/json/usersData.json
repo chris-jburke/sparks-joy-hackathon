@@ -1,5 +1,5 @@
 {
 	"users":[
-		{"name":"Bob Ross","email":"bob@test.com","password":"test"},
+		{"name":"Bob Ross","email":"bob@test.com","password":"test"}
 	]
 }
