@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import {Switch, Route, BrowserRouter, Link } from 'react-router-dom'
 import SignUpCom from './SignUpCom'
 import SignInCom from './SignInCom'
 import Profile from './Profile'
@@ -12,7 +12,15 @@ const Content = (props) =>{
 	const [useLocalStorage, setUseLocalStorage] = useState(false)
 	const [allClosets, setAllClosets] = useState(usersClosets)
 	return(
+		<div>
+		
 		<BrowserRouter>
+		<span className="navbar">
+			<ul>
+				<li className="li"><Link to="/profile">Profile</Link></li>
+				<li className="li"><Link to="/">LogOut</Link></li>
+			</ul>
+		</span>
 		<Switch>
 			<Route exact path="/" component={()=> <HomeCom />} />
 			<Route path="/signup" component={()=> <SignUpCom />} />
@@ -20,6 +28,7 @@ const Content = (props) =>{
 			<Route path="/profile" component={()=> <Profile currUser={currUser} allClosets={allClosets} />} />
 		</Switch>
 		</BrowserRouter>
+		</div>
 	)
 }
 
