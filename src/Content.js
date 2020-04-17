@@ -8,26 +8,15 @@ import usersData from './json/usersData'
 import usersClosets from './json/usersClosets'
 const Content = (props) =>{
 	const [signedIn, setSignedIn] = useState(false)
-	const [currUser, setCurrUser] = useState("")
+	const [currUser, setCurrUser] = useState("bob@test.com")
 	const [useLocalStorage, setUseLocalStorage] = useState(false)
-	useEffect(()=> {
-		if(useLocalStorage){
-			localStorage.setItem("closets", JSON.stringify(usersClosets))
-			localStorage.setItem("users", JSON.stringify(usersData))
-		}
-	},[useLocalStorage])
-	useEffect(() => {		
-		if (typeof(Storage) !== "undefined") {
-			setUseLocalStorage(true)
-		}
-	},[])
-
+	const [allClosets, setAllClosets] = useState(usersClosets)
 	return(
 		<Switch>
 			<Route exact path="/" component={()=> <HomeCom />} />
 			<Route path="/signup" component={()=> <SignUpCom />} />
 			<Route path="/signin" component={()=> <SignInCom setCurrUser={setCurrUser} signedIn={signedIn} setSignedIn={setSignedIn}/>} />
-			<Route path="/profile" component={()=> <Profile currUser={currUser} />} />
+			<Route path="/profile" component={()=> <Profile currUser={currUser} allClosets={allClosets} />} />
 		</Switch>
 	)
 }

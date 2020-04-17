@@ -3,7 +3,8 @@ import {Grid, Box, FormControl, Input, InputLabel, Button} from '@material-ui/co
 import {Redirect} from 'react-router-dom'
 import Snackbar, {SnackbarOrigin} from '@material-ui/core/Snackbar'
 import MuiAlert from '@material-ui/lab/Alert'
-
+import usersData from './json/usersData'
+import usersClosets from './json/usersClosets'
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />

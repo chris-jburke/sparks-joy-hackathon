@@ -55,9 +55,8 @@ const SignInCom = (props) => {
             user,
             password
         }
-        let usersData = localStorage.getItem("users")
-        usersData = JSON.parse(usersData)
-        usersData.users.forEach(user=> {
+        let allUsers = usersData
+        allUsers.users.forEach(user=> {
             if(user.email === data.email && user.password === data.password){
                 props.setSignedIn(true)
                 props.setCurrUser(data.email)
