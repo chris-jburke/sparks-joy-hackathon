@@ -3,10 +3,10 @@ import {Box, Grid} from '@material-ui/core'
 const ProfileCloset = (props) => {
 	const [myCloset, setMyCloset] = useState(props.closet)
 
-	const getJSX = (type, color, material, size) => {
+	const getJSX = (type, color, material, size, i) => {
 
 		return (
-			<Grid item xs={12}>
+			<Grid key={i} item xs={12}>
 				<span>Type: {type}</span>
 				<span>Color: {color}</span>
 				<span>Material: {material}</span>
@@ -18,11 +18,11 @@ const ProfileCloset = (props) => {
 		<Grid
 			container
 			justify="center"
-			alignConent="center"
+			alignContent="center"
 			alignItems="center"
 		>
-			{myCloset.map(item => (
-				getJSX(item.type,item.color,item.material,item.size)
+			{myCloset.map((item, i) => (
+				getJSX(item.type,item.color,item.material,item.size,i)
             ))}
 		</Grid>
 	)
