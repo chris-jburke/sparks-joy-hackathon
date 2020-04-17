@@ -1,1 +1,25 @@
-			
+{
+	"closets":[
+		{
+			"owner":"bob@test.com",
+			"closet":[
+				{"type":"jeans","color":"blue","material":"denim", "size":"M"},
+				{"type":"jeans","color":"black","material":"denim", "size":"M"},
+				{"type":"jeans","color":"grey","material":"denim", "size":"M"},
+				{"type":"tshirt","color":"white","material":"cotton", "size":"M"},
+				{"type":"tshirt","color":"black","material":"cotton", "size":"M"}
+			]
+
+		},
+		{
+			"owner":"jane@test.com",
+			"closet":[
+				{"type":"jeans","color":"blue","material":"denim", "size":"M"},
+				{"type":"jeans","color":"black","material":"denim", "size":"M"},
+				{"type":"jeans","color":"grey","material":"denim", "size":"M"},
+				{"type":"tshirt","color":"white","material":"cotton", "size":"M"},
+				{"type":"tshirt","color":"black","material":"cotton", "size":"M"}
+			]
+		}
+	]
+}			
