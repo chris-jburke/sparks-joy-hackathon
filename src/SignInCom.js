@@ -55,39 +55,16 @@ const SignInCom = (props) => {
             user,
             password
         }
+        let usersData = localStorage.getItem("users")
+        usersData = JSON.parse(usersData)
         usersData.users.forEach(user=> {
             if(user.email === data.email && user.password === data.password){
-                
+                props.setSignedIn(true)
+                props.setCurrUser(data.email)
+            } else {
+                setMessage("There was an error signing in!")
+                handleOpen()
             }
-        })
-        fetch(`/api/signup`, {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then ((response) => {
-            response.json().then(result => {
-                if(response.ok) {
-                    props.updateUser(result.user["nickname"])
-                    props.userOnChange(result.user["nickname"])
-                    props.sessionOnChange(result.session["sessionid"])
-                    props.setSignedIn(true)
-                //props.updateUser(result.token)
-                } else {
-                    setMessage(`${response.status} ${response.statusText}: ${result.error.Message}`)
-                    handleOpen()
-                }
-            }).catch( (err) => {
-                console.log(err)
-                setMessage(`Error: ${err.toString()}`)
-                handleOpen()    
-            })
-        }).catch( (err) => {
-            console.log('Error', err)
-            setMessage(`Error: ${err.toString()}`)
-            handleOpen()
         })
     }
     const handleRedirect = (e) => {
@@ -98,14 +75,11 @@ const SignInCom = (props) => {
         e.preventDefault()
         setSendHome(true)
     }
-    if(sendHome) {
-        return <Redirect to="/" />
-    }
     if(props.signedIn){
-        return <Redirect to="/" />
+        return <Redirect to="/profile" />
     }
     if(redirect) {
-        return <Redirect to="/signin" />
+        return <Redirect to="/signup" />
     }
     return(
         <Box style={{"backgroundColor":"rgba(255,255,255,.75)", "maxWidth":"75%", "minWidth":"50%", "margin": "25px auto", "textAlign":"center", "border":"2px black solid", "borderRadius":"10px"}}>
@@ -126,13 +100,6 @@ const SignInCom = (props) => {
                         </p>
                     </Box>
                 </Grid> 
-                <Grid item xs={12}>
-                    <FormControl>
-                        <InputLabel htmlFor="user">Username:</InputLabel>
-                        <Input id="first-name" name="user" aria-describedby="user-name-form" 
-                        onChange={(e) => setUser(e.currentTarget.value)} required />
-                    </FormControl>
-                </Grid>
                 <Grid item xs={12}>              
                     <FormControl>
                         <InputLabel htmlFor="email">Email:</InputLabel>
@@ -159,7 +126,7 @@ const SignInCom = (props) => {
             <Box className="password-info">
             <span>{passwordInfo ? 'Password is required to be more than 1 character long':''}</span>
             </Box>
-            <Button style={{marginTop: "20px"}} onClick={e => handleSubmit(e)} variant="outlined" className="submit-button">Sign Up</Button>
+            <Button style={{marginTop: "20px"}} onClick={e => handleSubmit(e)} variant="outlined" className="submit-button">Sign In</Button>
             <Box>
                 <p className="login">Cancel: &nbsp;
                     <Button onClick={(e) => handleHome(e)} variant="outlined">Go Home</Button>

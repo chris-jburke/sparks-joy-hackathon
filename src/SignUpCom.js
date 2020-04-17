@@ -3,7 +3,6 @@ import {Grid, Box, FormControl, Input, InputLabel, Button} from '@material-ui/co
 import {Redirect} from 'react-router-dom'
 import Snackbar, {SnackbarOrigin} from '@material-ui/core/Snackbar'
 import MuiAlert from '@material-ui/lab/Alert'
-import usersData from './json/usersData'
 
 
 function Alert(props) {
@@ -50,7 +49,7 @@ const SignUpCom = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(usersData)
+        let usersData = localStorage.getItem("users")
         let data = {
             email,
             user,
